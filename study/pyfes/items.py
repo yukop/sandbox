@@ -1,8 +1,14 @@
 import csv
 with open('items.csv', 'rb') as f:
   reader = csv.reader(f)
-  items = []
+  itemNames = []
   for row in reader:
-    items.append(row[1])
-  print items
-    
+    itemName = row[1]
+    itemNames.append(itemName) 
+    itemDict = {}
+    for itemName in itemNames:
+      if itemName in itemDict:
+        itemDict[itemName] += 1
+      else:
+        itemDict[itemName] = 1      
+  print itemDict

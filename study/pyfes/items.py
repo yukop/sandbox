@@ -7,10 +7,11 @@ def makeDictFromCsv(filename):
     itemDict = {}
     for row in reader:
       itemName = row[1].decode('cp932')
+      itemAmount = row[2]
       if itemDict.has_key(itemName):
-        itemDict[itemName] += 1
+        itemDict[itemName] += int(itemAmount)
       else:
-        itemDict[itemName] = 1
+        itemDict[itemName] = int(itemAmount)
   return itemDict
 
 def printResult(dict):

@@ -18,6 +18,8 @@ function getImageDataListFromJSON(json) {
 function setImageList(anImageList) {
 	$('.entryImage').attr('src', anImageList[0].imageURL);
 	$('.entryUrl').attr('href', anImageList[0].entryURL); 
+	$('#canonical').attr('href', anImageList[0].entryURL);
+	gapi.plusone.go();
 }
 
 var URL = 'https://spreadsheets.google.com/feeds/cells/0Ak1KvWLO65McdGtaMC05dGh5andQWHpiNHpLX1VxZnc/od6/public/basic?alt=json'

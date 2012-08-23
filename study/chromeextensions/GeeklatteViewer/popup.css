@@ -3,7 +3,7 @@ html, body {
   padding: 0;
 }
 body {
-  min-width: 240px;
+  width: 240px;
   font-family: Helvetica, Arial, sans-serif;
 }
 #latte {
@@ -11,6 +11,7 @@ body {
 }
 .entryImageBlock{
   display: block;
+  position: relative;
   overflow: hidden;
   margin: 0 auto;
   width: 240px;
@@ -24,4 +25,7 @@ body {
 a img{
   vertical-align: bottom;
   border: none;
+}
+.plusoneButton {
+  margin: 5px;
 }

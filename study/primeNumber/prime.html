@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-    <title>prime number</title>
-    <script src="prime.js"></script>
+<title>prime counting</title>
+<script src="prime.js"></script>
+<style type="text/css">
+textarea {
+    width: 100%;
+}
+</style>
 </head>
 
 <body>
-
-
+<form name="form1">
+<input type="text" name="num" size="10" value="100">
+<input type="button" value="prime counting" onclick="printPrimeNum(document.form1.num.value);">
+<br>
+<textarea name="primeNum" id="primeNum"></textarea>
+</form>
 </body>
 </html>

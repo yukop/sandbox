@@ -2,17 +2,21 @@ application: yukoppengine
 version: 1
 runtime: python27
 api_version: 1
-threadsafe: yes
+threadsafe: true
 
 handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: .*
-#  script: main.app
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /.*
   script: helloworld.app
 
 libraries:
-- name: webapp2
-  version: "2.5.1"
+#- name: webapp2
+#  version: "2.5.1"
+- name: jinja2
+  version: latest
